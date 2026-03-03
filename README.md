@@ -1,8 +1,8 @@
 # Class Track
-#### Preview
+#### Introduction
 
+ClassTrack is a furniture monitoring system for institutions to track the movement of furniture between classes. The aim of this project is to minimize class interruptions and responsibly manage school resources.
 
-#### Download
  
 ## Getting Started
 
