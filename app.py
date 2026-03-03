@@ -122,8 +122,6 @@ def get_first_floor():
         {"id": user_id}
     ).fetchone()
 
-
-
     # Count furniture per type for each room where current_room matches classroom
     results = (
     db.session.query(
@@ -236,9 +234,22 @@ def get_third_floor():
     )
 
 
-@app.route("/class_view", methods=['GET'])
-def get_class_view():
-    return render_template("class_view.html")
+@app.route('/furniture/delete/<int:id>', methods=['POST', 'GET'])
+def delete_furniture(id):
+    # Get the item by id
+    item = Furniture.query.get_or_404(id)
+    
+    try:
+        db.session.delete(item)   # Delete the item
+        db.session.commit()       # Commit the change
+        flash('Furniture item deleted successfully.', 'success')
+    except Exception as e:
+        db.session.rollback()
+        flash(f'Error deleting item: {str(e)}', 'danger')
+    
+    # Redirect back to the furniture list page
+    return redirect(url_for('get_edit'))
+
 
 
 @app.route("/test_chairs", methods = ['GET'])
