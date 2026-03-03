@@ -9,6 +9,8 @@ ClassTrack is a furniture monitoring system for institutions to track the moveme
 1. Clone Repository
 ```
 git clone https://github.com/Hawitta/ClassTrack_CESI.git
+
+cd ClassTrack_CESI
 ```
 2. Install Python Dependencies
 ```
