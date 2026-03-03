@@ -17,18 +17,15 @@ cd ClassTrack_CESI
 pip install -r requirements.txt
 ```
 
-3. Install Node JS Dependencies
+3. Run the database migrations: (Python v. 3.14)
 ```
-npm install
+python -m flask db upgrade  
+
 ```
 
-4. Run the database migrations:
+4. Run project
 ```
-flask db upgrade 
-```
-5. Run project
-```
-flask run
+python -m flask run
 ```
 
 ## License
