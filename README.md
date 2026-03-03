@@ -1,7 +1,6 @@
-# Duralux - CRM Admin & Dashboard HTML Template
+# Class Track
 #### Preview
 
- - [Demo](https://themewagon.github.io/Duralux-admin/)
 
 #### Download
  - [Download from ThemeWagon](https://themewagon.com/themes/Duralux-admin/)
