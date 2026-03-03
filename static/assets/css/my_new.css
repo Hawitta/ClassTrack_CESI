@@ -1,0 +1,14 @@
+.custom-yellow-btn {
+    background-color: #fbe216;
+    color: black;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.custom-yellow-btn:hover {
+    background-color: #000000; /* slightly darker on hover */
+    color: #fbe216;
+}

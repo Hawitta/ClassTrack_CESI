@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="nxl-content">
+
+    <div class="page-header">
+        <div class="page-header-left d-flex align-items-center">
+            <div class="page-header-title">
+                <h5 class="m-b-10">Classrooms</h5>
+            </div>
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Second Floor</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="row">
+
+            {% for room in rooms %}
+              {% set counts = furniture_counts.get(room.class_name) %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card stretch stretch-full">
+                    <div class="card-body">
+
+                        <div class="hstack justify-content-between">
+                            <div>
+                                <div class="hstack gap-2 mb-4">
+                                    <i class="feather-calendar"></i>
+                                    <span>Classroom Details</span>
+                                </div>
+
+                                <h4 class="fw-bolder mb-3">
+                                    {{ room.class_name }}
+                                </h4>
+
+                        
+                                <!-- Replace static numbers later with real counts -->
+                                <p class="fs-12 text-muted mb-2">
+                                    Chairs:
+                                    <span class="fw-semibold text-dark">{{ counts.chairs if counts else 0}}</span>
+                                </p>
+
+                                <p class="fs-12 text-muted mb-2">
+                                    Tables:
+                                    <span class="fw-semibold text-dark">{{ counts.tables if counts else 0}}</span>
+                                </p>
+
+                                <p class="fs-12 text-muted mb-2">
+                                    Monitors:
+                                    <span class="fw-semibold text-dark">{{ counts.monitors if counts else 0}}</span>
+                                </p>
+                                
+                                
+                                <!-- <a href="#" class="custom-yellow-btn">View </a> -->
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
