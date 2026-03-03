@@ -1,36 +1,32 @@
-# Duralux - CRM Admin & Dashboard HTML Template
-#### Preview
+# Class Track
+#### Introduction
 
- - [Demo](https://themewagon.github.io/Duralux-admin/)
+ClassTrack is a furniture monitoring system for institutions to track the movement of furniture between classes. The aim of this project is to minimize class interruptions and responsibly manage school resources.
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/Duralux-admin/)
-
+ 
 ## Getting Started
 
 1. Clone Repository
 ```
-git clone https://github.com/themewagon/Duralux-admin.git
+git clone https://github.com/Hawitta/ClassTrack_CESI.git
 ```
-2. Install Dependencies
+2. Install Python Dependencies
 ```
-npm i
-```
-3. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pip install -r requirements.txt
 ```
 
-## Author 
+3. Install Node JS Dependencies
 ```
-Design and code is completely written by theme_ocean and development team. 
+npm install
+```
+
+4. Run the database migrations:
+```
+flask db upgrade 
+```
+5. Run project
+```
+flask run
 ```
 
 ## License
